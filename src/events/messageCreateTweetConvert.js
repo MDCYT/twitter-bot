@@ -6,7 +6,6 @@ export default {
 	name: Events.MessageCreate,
 	async execute(message) {
 		if (message.author.bot) return;
-		console.log(message.content);
 
 		const tweetRegex = /https?:\/\/(?:x|twitter)\.com\/\w+\/status\/(?<tweet>\d+)/i;
 		const userRegex = /https?:\/\/(?:x|twitter)\.com\/(?<user>\w{1,15})/i;
