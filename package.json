@@ -8,7 +8,7 @@
     "lint": "prettier --check . && eslint --ext .js --format=pretty src",
     "deploy": "node -r dotenv/config src/util/deploy.js",
     "format": "prettier --write . && eslint --ext .js --fix --format=pretty src",
-    "start": "node src/index.js",
+    "start": "node -r dotenv/config src/index.js",
     "dev": "nodemon -r dotenv/config src/index.js"
   },
   "dependencies": {
