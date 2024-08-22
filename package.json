@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "prettier --check . && eslint --ext .js --format=pretty src",
+    "deploy": "node -r dotenv/config src/util/deploy.js",
+    "format": "prettier --write . && eslint --ext .js --fix --format=pretty src",
+    "start": "node src/index.js",
+    "dev": "nodemon -r dotenv/config src/index.js"
+  },
+  "dependencies": {
+    "@discordjs/core": "^1.2.0",
+    "discord-api-types": "^0.37.96",
+    "discord.js": "^14.15.0",
+    "dotenv": "^16.4.5",
+    "numeral": "^2.0.6",
+    "openai": "^4.56.0",
+    "topgg-autoposter": "^2.0.2"
+  },
+  "devDependencies": {
+    "@sapphire/ts-config": "^4.0.1",
+    "eslint": "^8.53.0",
+    "eslint-config-neon": "^0.1.57",
+    "eslint-formatter-pretty": "^5.0.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.1.0",
+    "zod": "^3.22.4"
+  }
+}
