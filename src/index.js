@@ -6,7 +6,7 @@ import { loadCommands, loadEvents } from './util/loaders.js';
 import { registerEvents } from './util/registerEvents.js';
 
 // Initialize the client
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
 const ap = AutoPoster(process.env.TOPGG_TOKEN, client);
 
 // Load the events and commands
